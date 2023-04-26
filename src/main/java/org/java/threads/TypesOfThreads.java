@@ -35,17 +35,8 @@ public class TypesOfThreads extends Thread {
         thread.setDaemon(true);
         System.out.println("thread.isDaemon() after setting the thread to daemon explicitly = " + thread.isDaemon()); // Output: true
 
-        TypesOfThreads threads = new TypesOfThreads(new Runnable(){
-
-            @Override
-            public void run() {
-                System.out.println("From anonymous inner class");
-            }
-        });
+        TypesOfThreads threads = new TypesOfThreads(() -> System.out.println("From anonymous inner class"));
 
         threads.start();
-
-
-
     }
 }
