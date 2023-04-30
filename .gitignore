@@ -1,8 +1,7 @@
 /.idea/misc.xml
 /.idea/modules.xml
 /The Core Java Project.iml
-/out/production/The Core Java Project/org/java/threads/ThreadUsingExtendsThread.class
-/out/production/The Core Java Project/org/java/threads/ThreadUsingImplementsRunnable.class
-/out/production/The Core Java Project/org/java/threads/TypesOfThreads.class
 /.idea/vcs.xml
 /.idea/workspace.xml
+/out
+
