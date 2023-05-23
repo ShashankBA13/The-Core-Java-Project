@@ -15,9 +15,9 @@ public class IllegalThreadStateException extends Thread{
         IllegalThreadStateException illegalThreadStateException = new IllegalThreadStateException();
         Thread t = new Thread(illegalThreadStateException);
 
-        /* This is One way to create the exception
-        t.start();
-        t.start(); // Throws illegal thread state exception, because the thread is already running.
+        /*  This is One way to create the exception
+            t.start();
+            t.start(); // Throws illegal thread state exception, because the thread is already running.
          */
 
         t.start();
