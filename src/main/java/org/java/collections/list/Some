@@ -1,0 +1,13 @@
+class Test{
+
+}
+
+class Child extends Test{
+
+    void m1(){ }
+
+    psvm{
+        Test obj = new Child();
+        obj.m1();
+    }
+}

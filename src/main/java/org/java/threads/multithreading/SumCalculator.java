@@ -8,11 +8,10 @@ public class SumCalculator {
 
     private static final int NUM_OF_THREADS = Runtime.getRuntime().availableProcessors();
     private static int count;
-    private static String fileName = "ListOfRandomNumbers";
+    private static final String fileName = "ListOfRandomNumbers";
 
     public static void main(String[] args) {
         System.out.println("No of processors available: " + NUM_OF_THREADS);
-
 
         for (int i = 0; i < 5; i++) {
             System.out.println(SumCalculator.fileNameGenerator());
@@ -21,7 +20,6 @@ public class SumCalculator {
         int[] numbers = generateNumbers(10);
 
         try (FileWriter writer = new FileWriter(fileName)) {
-
             for (int num : numbers) {
                 System.out.println("num = " + num);
                 writer.write(Integer.toString(num));

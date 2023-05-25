@@ -1,4 +1,4 @@
-package org.java.singleton.org.java.simple;
+package org.java.programs;
 
 public class EvenOrOdd {
     public static void main(String[] args) {

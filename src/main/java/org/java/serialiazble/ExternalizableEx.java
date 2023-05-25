@@ -1,4 +1,4 @@
-package org.java.singleton.org.java.serialiazble;
+package org.java.serialiazble;
 
 import java.io.Externalizable;
 import java.io.IOException;
