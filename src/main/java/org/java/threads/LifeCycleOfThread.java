@@ -1,6 +1,6 @@
 package org.java.threads;
 
-public class LifeCycleOfThread extends Thread{
+public class LifeCycleOfThread extends Thread {
 
     // Thread has the following lifecycle
     /*
@@ -25,22 +25,22 @@ public class LifeCycleOfThread extends Thread{
 
     }
 
-   private static class MyRunnable implements Runnable {
+    private static class MyRunnable implements Runnable {
 
-       @Override
-       public void run() {
-           //print a message to indicate that the thread has started
-           System.out.println("Thread is running");
+        @Override
+        public void run() {
+            //print a message to indicate that the thread has started
+            System.out.println("Thread is running");
 
-           //Giving some work
-           try {
-               Thread.sleep(1000);
-           } catch (InterruptedException e) {
-               e.printStackTrace();
-           }
+            //Giving some work
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
-           //print a message to indicate that the thread has finished
-           System.out.println("Thread is finished");
-       }
-   }
+            //print a message to indicate that the thread has finished
+            System.out.println("Thread is finished");
+        }
+    }
 }

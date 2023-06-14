@@ -25,11 +25,6 @@ public class TypesOfThreads extends Thread {
      *                    user threads are executed.
      */
 
-    @Override
-    public void run() {
-        // Some functional code here
-    }
-
     public static void main(String[] args) {
 
         TypesOfThreads thread = new TypesOfThreads();
@@ -42,5 +37,10 @@ public class TypesOfThreads extends Thread {
         TypesOfThreads threads = new TypesOfThreads(() -> System.out.println("From anonymous inner class"));
 
         threads.start();
+    }
+
+    @Override
+    public void run() {
+        // Some functional code here
     }
 }

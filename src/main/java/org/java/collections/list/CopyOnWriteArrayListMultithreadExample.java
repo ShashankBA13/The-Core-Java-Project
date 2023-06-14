@@ -38,8 +38,8 @@ class WriterThread implements Runnable {
 }
 
 class ReaderThread implements Runnable {
-    private CopyOnWriteArrayList<Integer> list;
     private final ReentrantLock lock;
+    private CopyOnWriteArrayList<Integer> list;
 
     public ReaderThread(CopyOnWriteArrayList<Integer> list, ReentrantLock lock) {
         this.list = list;

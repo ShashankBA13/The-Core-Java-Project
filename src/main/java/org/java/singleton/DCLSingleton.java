@@ -11,12 +11,13 @@ public class DCLSingleton {
      */
     private static volatile DCLSingleton _instance = null;
 
-    private DCLSingleton() {}
+    private DCLSingleton() {
+    }
 
     public static DCLSingleton instance() {
-        if(_instance==null){ // 1st Check
-            synchronized (DCLSingleton.class){
-                if(_instance == null){ // 2nd Check
+        if (_instance == null) { // 1st Check
+            synchronized (DCLSingleton.class) {
+                if (_instance == null) { // 2nd Check
                     _instance = new DCLSingleton();
                 }
             }

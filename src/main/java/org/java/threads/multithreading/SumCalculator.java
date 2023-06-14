@@ -7,8 +7,8 @@ import java.util.Random;
 public class SumCalculator {
 
     private static final int NUM_OF_THREADS = Runtime.getRuntime().availableProcessors();
-    private static int count;
     private static final String fileName = "ListOfRandomNumbers";
+    private static int count;
 
     public static void main(String[] args) {
         System.out.println("No of processors available: " + NUM_OF_THREADS);

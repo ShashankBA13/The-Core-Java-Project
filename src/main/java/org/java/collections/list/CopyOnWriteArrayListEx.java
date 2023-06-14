@@ -5,6 +5,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class CopyOnWriteArrayListEx {
 
     public static void main(String[] args) {
+
         CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
 
         list.add("Hello");
@@ -13,7 +14,7 @@ public class CopyOnWriteArrayListEx {
 
         System.out.println("List: " + list);
 
-        for(String element : list){
+        for (String element : list) {
             System.out.println("Element: " + element);
         }
 

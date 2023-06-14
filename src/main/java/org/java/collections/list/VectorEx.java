@@ -23,7 +23,7 @@ public class VectorEx {
         System.out.println(vector);
 
         // Checking if the element exists
-        if(vector.contains(3.0))
+        if (vector.contains(3.0))
             System.out.println("vector contains 3.0");
 
         // Printing the values using Enumerator

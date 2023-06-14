@@ -11,9 +11,10 @@ public class ExternalizableEx implements Externalizable {
     private String title;
     private Integer price;
 
-    public ExternalizableEx(){}
+    public ExternalizableEx() {
+    }
 
-    public ExternalizableEx(String author, String title, Integer price){
+    public ExternalizableEx(String author, String title, Integer price) {
         this.author = author;
         this.title = title;
         this.price = price;

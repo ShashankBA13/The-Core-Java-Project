@@ -1,12 +1,14 @@
 package org.java.collections.list;
 
-import org.java.util.ExecutionTime;
+//import org.java.util.ExecutionTime;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 
 public class ArrayListEx extends ArrayList<Object> {
 
-    @ExecutionTime
+    //    @ExecutionTime
     public static void main(String[] args) {
 
         ArrayListEx a = new ArrayListEx();
@@ -24,6 +26,8 @@ public class ArrayListEx extends ArrayList<Object> {
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
+
+        Collections.reverse(a);
 
         Integer target = 4;
 
@@ -44,13 +48,23 @@ public class ArrayListEx extends ArrayList<Object> {
         }
 //        a.doStuff();
 //        ExecutionTimeWrapper.measureExecutionTime(a);
+
+        final ArrayList<String> string = new ArrayList<>();
+        string.add("Shashank");
+        string.add("Lovish");
+
+        System.out.println("Arrray: " + string);
+
+        for (String str : string)
+            System.out.println(str);
     }
 
-    @ExecutionTime // NOT WORKING
-    public  void doStuff(){
-        try{
+
+    //    @ExecutionTime // NOT WORKING
+    public void doStuff() {
+        try {
             Thread.sleep(1000);
-        }catch(InterruptedException e){
+        } catch (InterruptedException e) {
             e.getCause();
         }
     }

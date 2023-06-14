@@ -1,13 +1,16 @@
-class Test{
+1.
+    class Test{
 
-}
-
-class Child extends Test{
-
-    void m1(){ }
-
-    psvm{
-        Test obj = new Child();
-        obj.m1();
     }
-}
+
+    class Child extends Test{
+
+        void m1(){ }
+
+        public static void main(String... args) {
+            Test obj = new Child();
+            obj.m1();
+        }
+    }
+
+2.

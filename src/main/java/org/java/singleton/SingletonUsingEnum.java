@@ -3,7 +3,7 @@ package org.java.singleton;
 public enum SingletonUsingEnum {
     INSTANCE;
 
-    public void show(){
+    public void show() {
         System.out.println("Singleton Using Enum");
     }
 }

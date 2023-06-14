@@ -12,6 +12,8 @@ public class EnumMapExample {
         map.put(Day.MONDAY, "WORK");
         map.put(Day.TUESDAY, "WORK");
         map.put(Day.WEDNESDAY, "WORK");
+        map.put(Day.SUNDAY, "ENJOY");
+        map.put(Day.SATURDAY, "YAYY!!!!!!!");
         map.put(Day.THURSDAY, "NO WORK");
 
         System.out.println(map + "\n");
@@ -19,6 +21,7 @@ public class EnumMapExample {
         for (Map.Entry<Day, String> entry : map.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
+        System.out.println(map.hashCode());
     }
 
     enum Day {
