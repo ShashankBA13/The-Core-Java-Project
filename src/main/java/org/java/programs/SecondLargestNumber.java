@@ -12,13 +12,13 @@ public class SecondLargestNumber {
     }
 
     private static void secondHighestUsingStreams(Integer[] numbers) {
-        Integer secondHighest = Arrays.asList(numbers).stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(null);
+        Integer secondHighest = Arrays.stream(numbers).distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst().orElse(null);
         System.out.println(secondHighest);
     }
 
     private static void secondLargestNumber(Integer[] numbers) {
         List<Integer> sortedSet = new ArrayList<>(Arrays.asList(numbers));
-        Collections.sort(sortedSet, Collections.reverseOrder());
+        sortedSet.sort(Collections.reverseOrder());
         System.out.println(sortedSet.get(1));
     }
 }
