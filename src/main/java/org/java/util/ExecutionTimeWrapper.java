@@ -12,10 +12,10 @@ public class ExecutionTimeWrapper {
             if (method.isAnnotationPresent(ExecutionTime.class)) {
                 long startTime = System.currentTimeMillis();
                 try {
-//                    method.setAccessible(true);
+                    // method.setAccessible(true);
                     method.invoke(object);
                 } catch (Exception e) {
-//                    e.printStackTrace();
+                     e.printStackTrace();
                 }
                 long endTime = System.currentTimeMillis();
                 long executionTime = endTime - startTime;

@@ -6,6 +6,7 @@ public class C implements A, B{
     public void m1() {
 
     }
+
 }
 
 interface A{

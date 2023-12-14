@@ -18,7 +18,7 @@ public class DuplicatesInArrayList {
     }
 
     private static void duplicateRemoveUsingEight(List<String> list) {
-        List<String> unduplicated = list.stream().distinct().sorted().collect(Collectors.toList());
+        List<String> unduplicated = list.stream().distinct().sorted().toList();
         System.out.println("UnDuplicated: " + unduplicated);
     }
 }

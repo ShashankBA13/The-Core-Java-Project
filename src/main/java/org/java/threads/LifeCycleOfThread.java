@@ -2,13 +2,13 @@ package org.java.threads;
 
 public class LifeCycleOfThread extends Thread {
 
-    // Thread has the following lifecycle
-    /*
-    1.  New State
-    2. Active State
-    3. Waiting/Blocked State
-    4. Timed Waiting State
-    5. Terminated State
+    /**
+     * Thread lifecycle ->
+        1.  New State
+        2. Active State
+        3. Waiting/Blocked State
+        4. Timed Waiting State
+        5. Terminated State
      */
 
     public static void main(String[] args) throws InterruptedException {

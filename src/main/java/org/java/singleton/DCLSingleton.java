@@ -4,7 +4,7 @@ public class DCLSingleton {
 
     // DCL - Double-Checked Locking
 
-    /*
+    /**
      * A static volatile field is used to hold the instance of the Singleton class.
      * Without volatile, it won't be thread safe bcoz it provides the happens-before
      * guarantee
