@@ -24,14 +24,14 @@ public class LambdaExpressions {
         // Using Lambda expressions from Java8
 
         numbers.sort((number1, number2) -> number1.compareTo(number2));
-//        Collections.sort(numbers, Float::compareTo); // A method in the Float.class
-//        Collections.sort(numbers, Comparator.naturalOrder());
-//        Collections.sort(numbers, Comparator.reverseOrder());
+        //Collections.sort(numbers, Float::compareTo); // A method in the Float.class
+        //Collections.sort(numbers, Comparator.naturalOrder());
+        //Collections.sort(numbers, Comparator.reverseOrder());
         System.out.println("Sorted list using Lambda expressions: " + numbers);
 
 
         //Lambda expression to print the elements of the list
-//        numbers.forEach(i -> System.out.println(i));
+        //numbers.forEach(i -> System.out.println(i));
 
         Consumer<Float> consumer = (n) -> System.out.println(n);
         numbers.forEach(consumer);

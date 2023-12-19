@@ -19,13 +19,7 @@ public class Test {
 //        Collections.sort(list, Collections.reverseOrder());
 //        System.out.println(list);
 
-        list.sort(new Comparator<String>() {
-
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.compareTo(o2);
-            }
-        });
+        list.sort(String::compareTo);
 
         System.out.println(list);
     }
