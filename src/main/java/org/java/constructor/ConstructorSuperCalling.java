@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ConstructorSuperCalling {
 
     public static void main(String[] args) {
-        B b = new B(1);
+        new B(1);
 
         String s = "Shashank";
         byte[] bytes = s.getBytes();

@@ -9,11 +9,11 @@ public class DeadLock extends Thread {
         Lock resource1 = new ReentrantLock(true);
         Lock resource2 = new ReentrantLock(true);
 
-         /*
-          In this, Thread-0 has acquired resource1, and Thread-1 has acquired resource2.
-          Both of them will then be waiting for the other thread to release the resource they need.
-          This will cause a deadlock, and both threads will be blocked indefinitely, waiting for a
-          resource that will never be released.
+         /**
+          * In this, Thread-0 has acquired resource1, and Thread-1 has acquired resource2.
+          * Both of them will then be waiting for the other thread to release the resource they need.
+          * This will cause a deadlock, and both threads will be blocked indefinitely, waiting for a
+          * resource that will never be released.
          */
 
         Thread thread1 = new Thread(() -> {

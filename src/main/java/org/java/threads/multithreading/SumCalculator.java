@@ -7,7 +7,7 @@ import java.util.Random;
 public class SumCalculator {
 
     private static final int NUM_OF_THREADS = Runtime.getRuntime().availableProcessors();
-    private static final String fileName = "ListOfRandomNumbers";
+    private static final String FILE_NAME = "ListOfRandomNumbers";
     private static int count;
 
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class SumCalculator {
 
         int[] numbers = generateNumbers(10);
 
-        try (FileWriter writer = new FileWriter(fileName)) {
+        try (FileWriter writer = new FileWriter(FILE_NAME)) {
             for (int num : numbers) {
                 System.out.println("num = " + num);
                 writer.write(Integer.toString(num));
@@ -31,7 +31,7 @@ public class SumCalculator {
     }
 
     static String fileNameGenerator() {
-        String fileNameNumber = fileName + count + ".txt";
+        String fileNameNumber = FILE_NAME + count + ".txt";
         count++;
         return fileNameNumber;
     }
