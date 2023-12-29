@@ -14,8 +14,8 @@ public class UncheckedToCheckedWrapping {
         try {
             doSomething();
         } catch (CustomException e) {
-            System.out.println(e.getMessage());
-            System.out.println(e.getCause());
+            System.out.println("Message: " +e.getMessage());
+            System.out.println("Cause: " + e.getCause());
         }
     }
 }
