@@ -11,7 +11,6 @@ public class TestSorting {
         TreeSet<String> set = new TreeSet<String>(Arrays.asList(string));
         System.out.println(set);
 
-
         for (int i = 0; i < string.length; i++) {
             for (int j = 0; j < string.length; j++) {
                 if (string[j].compareToIgnoreCase(string[i]) > 0) {
