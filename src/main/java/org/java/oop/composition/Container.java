@@ -2,7 +2,7 @@ package org.java.oop.composition;
 
 public class Container {
 
-    public Contained contained;
+    private final Contained contained;
 
     public Container() {
         this.contained = new Contained();
@@ -12,11 +12,8 @@ public class Container {
         return contained;
     }
 
-}
-
-class Contained {
     void doSomething() {
-        System.out.println("Hello from doSomething");
+        System.out.println("Container.doSomething");
     }
 
 }
