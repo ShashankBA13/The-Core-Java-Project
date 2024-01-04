@@ -6,7 +6,7 @@ import java.util.List;
 public class ReversingString {
 
     public static void main(String[] args) {
-        String str = "Shashank";
+        String str = "Someone";
         reversingString(str);
         reversingStringUsingStringBuilder(str);
         reversingStringUsingCharArray(str);
