@@ -10,6 +10,7 @@ public class ReversingString {
         reversingString(str);
         reversingStringUsingStringBuilder(str);
         reversingStringUsingCharArray(str);
+        reverseStringUsingStringBuilder(str);
     }
 
     private static void reversingString(String str) {
@@ -43,5 +44,15 @@ public class ReversingString {
             end--;
         }
         System.out.println("Using Char Array: " + new String(charArray));
+    }
+
+    private static String reverseStringUsingStringBuilder(String stringToReverse) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int i = stringToReverse.length() - 1; i >= 0; i--) {
+            stringBuilder.append(stringToReverse.charAt(i));
+        }
+        System.out.println("Reversed String: " + stringBuilder);
+
+        return stringBuilder.toString();
     }
 }
