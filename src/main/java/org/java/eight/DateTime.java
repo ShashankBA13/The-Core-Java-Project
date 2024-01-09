@@ -22,9 +22,9 @@ public class DateTime {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
 
-        LocalTime date = LocalTime.MIDNIGHT;
+        LocalTime midnight = LocalTime.MIDNIGHT;
         LocalTime parsedTime = LocalTime.parse("22:50:45", formatter);
-        System.out.println(date);
-        System.out.println(parsedTime);
+        System.out.println("Midnight = " + midnight);
+        System.out.println("Parsed Time = " + parsedTime);
     }
 }
