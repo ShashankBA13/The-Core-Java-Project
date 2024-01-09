@@ -2,23 +2,23 @@ package org.java.eight;
 
 public class Product {
 
-    int i;
+    int id;
     String Name;
 
-    public Product(int i, String potatoes) {
-        this.i = i;
-        this.Name = potatoes;
+    public Product(int productId, String productName) {
+        this.id = productId;
+        this.Name = productName;
     }
 
     public Product() {
     }
 
-    public int getI() {
-        return i;
+    public int getId() {
+        return id;
     }
 
-    public void setI(int i) {
-        this.i = i;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
