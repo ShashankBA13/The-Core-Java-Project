@@ -36,10 +36,6 @@ public class StreamAPI {
         streamBuilder.forEach(System.out::print); // Method Reference
         System.out.println();
 
-        /*The generate() method accepts a Supplier<T> for element generation.
-        As the resulting stream is infinite, the developer should specify the desired size,
-        or the generate() method will work until it reaches the memory limit.
-        */
         // Generates the number 5 times
         Stream<Integer> streamGenerated = Stream.generate(() -> 10).limit(5);
         streamGenerated.forEach(System.out::println);
