@@ -1,48 +1,40 @@
 package org.java.eight;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.function.BiFunction;
 
-
-/**
- * Lambda Expressions - It expresses the instance of the functional interface
- * */
 public class LambdaExpressions {
 
     public static void main(String[] args) {
 
-        final List<Float> numbers = Arrays.asList(3.76858f, 8.65747f, 1.748f, 2.45f, 5.464f, 7484.7494f);
-        System.out.println("Initial list: " + numbers);
+        // They are mainly used to simplify, concise the implementation of FI
 
-        // Sorting the numbers from highest to lowest before Java8
-        numbers.sort(new Comparator<Float>() {
+        // Traditional anonymous implementation of runnable interface
+        Runnable runnable = new Runnable() {
             @Override
-            public int compare(Float o1, Float o2) {
-                return o2.compareTo(o1);
+            public void run() {
+                System.out.println("Inside run method. Can preform some tasks here");
             }
-        });
-        System.out.println("Sorted list using Comparator: " + numbers);
+        };
 
-        // Using Lambda expressions from Java8
+        runnable.run();
 
-        numbers.sort((number1, number2) -> number1.compareTo(number2));
-        //Collections.sort(numbers, Float::compareTo); // A method in the Float.class
-        //Collections.sort(numbers, Comparator.naturalOrder());
-        //Collections.sort(numbers, Comparator.reverseOrder());
-        System.out.println("Sorted list using Lambda expressions: " + numbers);
+        Runnable runnableLambda = () -> System.out.println("Inside run method implemented using lambda");
 
+        runnableLambda.run();
 
-        //Lambda expression to print the elements of the list
-        //numbers.forEach(i -> System.out.println(i));
+        // Lambda expressions with parameters
+        BiFunction<Integer, Integer, Integer> addTwoThings = (a, b) -> a + b;
+        BiFunction<Integer, Integer, Integer> addTwoThingsWithMR = Integer::sum; // Internally it lloks like this (a, b) -> Integer.sum(a, b);
 
-        Consumer<Float> consumer = (n) -> System.out.println(n);
-        numbers.forEach(consumer);
+        System.out.println(addTwoThings.apply(1, 2));
+        System.out.println(addTwoThingsWithMR.apply(3, 4));
 
-        // Lambda expressions on functional interface
-        Interface impl = (i) -> System.out.println("\n" + "Hello");
-        impl.print(10);
-        impl.hello();
+        // Using with Stream API
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David");
+
+        names.forEach(name -> System.out.println(name));
+        names.forEach(System.out::println);
     }
 }
