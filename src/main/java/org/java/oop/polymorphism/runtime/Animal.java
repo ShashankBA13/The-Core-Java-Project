@@ -9,10 +9,10 @@ public class Animal {
 
 class Dog extends Animal {
 
-    @Override
-    void makeSound() {
-        System.out.println("Woof, Woof!!! \uD83D\uDC36 \uD83D\uDC15");
-    }
+//    @Override
+//    void makeSound() {
+//        System.out.println("Woof, Woof!!! \uD83D\uDC36 \uD83D\uDC15");
+//    }
 }
 
 class Cat extends Animal {
